@@ -12,33 +12,33 @@ let mainWindow;
 function onClosed() {
 	// dereference the window
 	// for multiple windows store them in an array
-	mainWindow = null;
+    mainWindow = null;
 }
 
 function createMainWindow() {
-	const win = new electron.BrowserWindow({
-		width: 1000,
-		height: 800
-	});
+    const win = new electron.BrowserWindow({
+        width: 1000,
+        height: 800
+    });
 
-	win.loadURL(`file://${__dirname}/app/ginger.html`);
-	win.on('closed', onClosed);
+    win.loadURL(`file://${__dirname}/app/ginger.html`);
+    win.on('closed', onClosed);
 
-	return win;
+    return win;
 }
 
 app.on('window-all-closed', () => {
-	if (process.platform !== 'darwin') {
-		app.quit();
-	}
+    if (process.platform !== 'darwin') {
+        app.quit();
+    }
 });
 
 app.on('activate', () => {
-	if (!mainWindow) {
-		mainWindow = createMainWindow();
-	}
+    if (!mainWindow) {
+        mainWindow = createMainWindow();
+    }
 });
 
 app.on('ready', () => {
-	mainWindow = createMainWindow();
+    mainWindow = createMainWindow();
 });
