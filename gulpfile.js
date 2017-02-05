@@ -2,7 +2,19 @@
 
 const gulp = require('gulp'),
     eslint = require('gulp-eslint'),
-    debug = require('gulp-debug');
+    debug = require('gulp-debug'),
+    exec = require('child_process').exec;
+
+gulp.task('zip', function (cb) {
+    exec("find . -type f -name \"*.zip\" -delete && for i in dist/*; do zip -r \"${i%/}.zip\" \"$i\"; done", function (err, stdout, stderr) {
+        // Long log better to avoid if not needed:
+        // if(stdout) console.log("[ZIP TASK stdout]:", stdout);
+        if(stderr) console.log("[ZIP TASK stderr]:", stderr);
+        cb(err);
+    });
+})
+
+
 
 gulp.task('lint', function() {
     var filesToLint = [
