@@ -1,5 +1,6 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
 		<!-- Estilos de fuente. Los he cogido a la ligera...  -->
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
@@ -57,6 +58,12 @@
 			.CodeMirror{
 				height: 245px;
 			}
+			.footer{
+				text-align: center;
+			}
+			.footer a{
+				text-decoration: none;
+			}
 		</style>
 
 	</head>
@@ -83,5 +90,9 @@
 				</div>
 			</section>
 		</div>
+		<div class="extra text-center">
+	<p class="footer">
+Desarrollado con &hearts; por <a target="_blank" href="https://github.com/OSWeekends">Open Source Weekends</a>. Versión (<script>const pck = require('../package.json');document.write(pck.version);</script>) usando Node(<script>document.write(process.versions.node)</script>),
+Chromium (<script>document.write(process.versions.chrome)</script>) y Electron (<script>document.write(process.versions.electron)</script>).</p>
 	</body>
 </html>
