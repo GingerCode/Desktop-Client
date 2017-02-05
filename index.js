@@ -17,11 +17,11 @@ function onClosed() {
 
 function createMainWindow() {
 	const win = new electron.BrowserWindow({
-		width: 600,
-		height: 400
+		width: 1000,
+		height: 800
 	});
 
-	win.loadURL(`file://${__dirname}/index.html`);
+	win.loadURL(`file://${__dirname}/app/ginger.html`);
 	win.on('closed', onClosed);
 
 	return win;
