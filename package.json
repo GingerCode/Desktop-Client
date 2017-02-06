@@ -1,0 +1,63 @@
+{
+  "name": "gingercode",
+  "productName": "Gingercode",
+  "version": "0.0.1",
+  "description": "Gingercode - Desktop Application",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OSWeekends/GingerCode-Desktop.git"
+  },
+  "author": "Open Source Weekends",
+  "contributors": [
+    {
+      "name": "Javier Gallego Martín",
+      "url": "https://github.com/bifuer"
+    },
+    {
+      "name": "Chelo Quilón",
+      "url": "https://github.com/lilxelo"
+    },
+    {
+      "name": "Jose Manuel Gallego Chamorro",
+      "url": "https://github.com/Josheriff"
+    },
+    {
+      "name": "Ulises Gascón",
+      "url": "https://github.com/ulisesGascon"
+    }
+  ],
+  "scripts": {
+    "test": "xo",
+    "start": "electron .",
+    "build": "electron-packager . --out=build --asar --overwrite --all"
+  },
+  "files": [
+    "index.js",
+    "index.html",
+    "index.css"
+  ],
+  "keywords": [
+    "pseudocode",
+    "gingercode"
+  ],
+  "dependencies": {
+    "electron-debug": "1.0.0"
+  },
+  "devDependencies": {
+    "devtron": "1.1.0",
+    "electron": "1.3.3",
+    "electron-packager": "8.0.0",
+    "gulp": "3.9.1",
+    "gulp-debug": "3.0.0",
+    "gulp-eslint": "3.0.1",
+    "xo": "0.16.0"
+  },
+  "xo": {
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ]
+  }
+}

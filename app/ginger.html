@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!-- Estilos de fuente. Los he cogido a la ligera...  -->
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+		<!-- Librería codemirror -->
+		<script src="js/codemirror.js"></script>
+		<link rel="stylesheet" href="css/codemirror.css">
+		<link rel="stylesheet" href="theme/ambiance.css">
+		<script src="js/javascript/javascript.js"></script>
+
+		<!-- Integración de codemirror-->
+		<script src="js/cm-integration.js"></script>
+
+		<!-- Algoritmo para pasar de pseudocodigo a JS-->
+		<script src="js/pc-js.js"></script>
+
+		<!-- ######### -->
+
+		<title>Ginger Code</title>
+
+		<!-- Hoja de estilos, de momento la tiro aquí -->
+		<style>
+			body{
+				background-color: #eeeeee;
+			}
+			#space{
+				max-width: 1000px;
+				margin: 0 auto;
+			}
+			header{
+				font-family: 'Open Sans', sans-serif;
+				text-align: center;
+			}
+			#space section{
+				text-align: center;
+			}
+			h2{
+				color: #fff;
+				background-color: black;
+				margin: 0;
+				padding: 5px 35px;
+			}
+			#PC, #JS, #CONSOLE{
+				text-align: left;
+				font-family: 'Open Sans', sans-serif;
+			}
+			#PC, #JS{
+				width: 49%;
+				display: inline-block;
+				//border: 1px solid red;
+			}
+			#CONSOLE{
+				margin: 7px;
+				border: 2px solid #eee;
+			}
+			.CodeMirror{
+				height: 245px;
+			}
+			.footer{
+				text-align: center;
+			}
+			.footer a{
+				text-decoration: none;
+			}
+		</style>
+
+	</head>
+
+	<!-- Comienza la página -->
+	<body onload="cmIntegration();">
+		<header>
+			<h1>Ginger Code</h1>
+			<p>Aprende a programar en pseudocodigo con Ginger Code</p>
+		</header>
+		<div id="space">
+			<section>
+				<div id="PC">
+					<h2>Pseudocodigo: </h2>
+					<textarea id="PCt"></textarea>
+				</div>
+				<div id="JS">
+					<h2>JavaScript:</h2>
+					<textarea id="JSt"></textarea>
+				</div>
+				<div id="CONSOLE">
+					<h2>Consola<button onclick="jailrun();">Probar</button></h2>
+					<textarea id="CONSOLEt"></textarea>
+				</div>
+			</section>
+		</div>
+		<div class="extra text-center">
+	<p class="footer">
+Desarrollado con &hearts; por <a target="_blank" href="https://github.com/OSWeekends">Open Source Weekends</a>. Versión (<script>const pck = require('../package.json');document.write(pck.version);</script>) usando Node(<script>document.write(process.versions.node)</script>),
+Chromium (<script>document.write(process.versions.chrome)</script>) y Electron (<script>document.write(process.versions.electron)</script>).</p>
+	</body>
+</html>
