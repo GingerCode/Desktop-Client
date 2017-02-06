@@ -36,6 +36,12 @@ jspm_packages
 # Optional REPL history
 .node_repl_history
 
+#build
+build
+
+#dist
+dist
+
 # Development
 IDEAS
 PRIVADO
