@@ -1,5 +1,6 @@
 'use strict';
-const electron = require('electron');
+const electron = require('electron'),
+      path = require('path');
 
 const app = electron.app;
 
@@ -18,7 +19,8 @@ function onClosed() {
 function createMainWindow() {
     const win = new electron.BrowserWindow({
         width: 1000,
-        height: 800
+        height: 800,
+        icon: path.join(__dirname, "app/img/app_logo.png")
     });
 
     win.loadURL(`file://${__dirname}/app/ginger.html`);
