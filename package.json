@@ -30,7 +30,9 @@
   "scripts": {
     "test": "xo",
     "start": "electron .",
-    "build": "electron-packager . --out=build --asar --overwrite --all"
+    "pack:all": "electron-packager . --out=build --asar --overwrite --all --icon=app/icons/logo.ico",
+    "pack:osx": "electron-packager . $npm_package_productName --out=dist/osx --platform=darwin --arch=x64 --icon=app/icons/logo.icns",
+    "build": "npm run pack:all && npm run pack:osx"
   },
   "files": [
     "index.js",
