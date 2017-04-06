@@ -17,6 +17,9 @@ function onClosed() {
 }
 
 function createMainWindow() {
+    /* --- MENU?? ---*/
+    require('./main_menu')
+
     const win = new electron.BrowserWindow({
         width: 1000,
         height: 800,
