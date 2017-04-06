@@ -1,0 +1,21 @@
+{
+  "name": "gingercode",
+  "description": "Gingercode - Desktop Application",
+  "main": "index.js",
+  "authors": [
+    "OSWeekends"
+  ],
+  "license": "GLP-3.0",
+  "keywords": [
+    "pseudocode",
+    "gingercode"
+  ],
+  "homepage": "https://github.com/GingerCode/Desktop-Client",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
