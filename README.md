@@ -42,3 +42,30 @@ $ gulp zip
 ```
 $ gulp dist
 ```
+
+## Changes
+
+### v.0.0.2
+
+**Features**
+
+- Fafonts and social fonts added
+- Editor view
+- Configuration view
+- Welcome view
+- Tabs added to the UI
+- Bootstrap added for fast prototyping
+- Bower Added
+- Typical shortcuts added
+- Main menu added with typical configuration
+- Art added to project
+- Icon added to navigation menu
+- Icon added to app for all distributions
+
+**Bugs**
+
+### v.0.0.1
+
+**Notes:**
+
+Hello World App.
