@@ -8,125 +8,212 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="icons/logo.ico">
-
     <title>Ginger Code - Aprender a programar es divertido</title>
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- EDITOR DE CÓDIGO...  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Librería codemirror -->
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="theme/ambiance.css">
+    <!-- FONTS FOOTER -->
+    <link rel="stylesheet" href="css/monosocialiconsfont.css">
     <style type="text/css">
-        body {
-          margin-top: 6px;
-          min-height: 100%;
-          height: 100%;
-        }
-
-        #exTab3 {
-          padding: 0px;
-          margin: 0px;
-          height:100vh;
-          width: 100%;
-        }
-
-        #exTab3 .nav-pills{
-          margin-left: 10px;
-        }
-
-        #exTab3 .nav-pills > li {}
-
-        #exTab3 .nav-pills > li > a {
-          border-radius: 4px 4px 0 0 ;
-          border-style: solid;
-          border-color: black;
-          border-width: 1px;
-          border-bottom: none;
-        }
-
-        #exTab3 .tab-content {
-          color : white;
-          background-color: #428bca;
-          padding : 5px 15px;
-          height:100vh;
-          width: 100%;
-        }
-
-        .welcome-logo{
-            max-width: 80%
-        }
-
-        .plus-size{
-          font-size: 20px;
-        }
+      /*
+      ---- GENERAL ----
+      */
+      body {
+      margin-top: 6px;
+      min-height: 100%;
+      height: 100%;
+      }
+      /*
+      ---- TABS/PESTAÑAS ----
+      */
+      #exTab3 {
+      padding: 0px;
+      margin: 0px;
+      height:100vh;
+      width: 100%;
+      }
+      #exTab3 .nav-pills{
+      margin-left: 10px;
+      }
+      #exTab3 .nav-pills > li {}
+      #exTab3 .nav-pills > li > a {
+      border-radius: 4px 4px 0 0 ;
+      border-style: solid;
+      border-color: black;
+      border-width: 1px;
+      border-bottom: none;
+      }
+      #exTab3 .tab-content {
+      color : white;
+      padding : 5px 15px;
+      min-height:100vh;
+      width: 100%;
+      }
+      .tab-content-blue {
+      background-color: #428bca;
+      }
+      .welcome-logo{
+      max-width: 80%;
+      }
+      .editor-logo{
+      max-height: 100px;
+      }
+      .plus-size{
+      font-size: 20px;
+      }
+      /*
+      ---- EDITOR ----
+      */
+      #PC, #JS, #CONSOLE{
+      text-align: left;
+      font-family: 'Open Sans', sans-serif;
+      }
+      #space h3 {
+      color: #fff;
+      background-color: black;
+      margin: 0;
+      padding: 5px 35px;
+      }
+      #CONSOLE {
+      margin-top: 30px;
+      }
+      /*
+      --- FOOTER ----
+      */
+      .footer{
+      font-size: 16px;
+      color: #fff;
+      background-color: black;
+      text-align: center;
+      margin: 0;
+      text-align: center;
+      vertical-align: middle;
+      line-height: 40px;
+      }
+      .footer a{
+      text-decoration: none;
+      }
     </style>
   </head>
-
-  <body>
+  <body onload="cmIntegration();">
     <div id="exTab3" class="container">
     <ul  class="nav nav-pills">
-    			<li class="active">
-            <a  href="#1b" data-toggle="tab">Bienvenido</a>
-    			</li>
-    			<li><a href="#2b" data-toggle="tab">Configuración</a>
-    			</li>
-    			<li><a href="#3b" data-toggle="tab">Editor</a>
-    			</li>
-          <li><a href="#4b" data-toggle="tab" class="fa fa-plus-circle plus-size" aria-hidden="true"></a>
-          </li>
-    		</ul>
-
-    			<div class="tab-content clearfix">
-    			  <div class="tab-pane active" id="1b">
-              <div class="row">
-                <div class="col-sm-8">
-
-                  <img class="welcome-logo" src="img/vertical_logo.png">
-                  <h3>¡Aprende a progrmar!</h3>
-                  <strong>Si necesitas ayuda, visita:</strong>
-                  <ul>
-                    <li><p>Documentación oficial sobre el lenguajde de programación JavaScript</p></li>
-                    <li><p>Documentación sobre Ginger Code y esta aplicación de escritorio</p></li>
-                    <li><p>Conoce a la comuniad que esta destras</p></li>
-                    <li><p>Ponte a prueba con nuestros ejercicios!</p></li>
-                    <li><p>Aprende desde cero a tu ritmo con nuestros vídeos de Youtube</p></li>
-                  </ul>
-                </div>
-                <div class="col-sm-4">
-                  <h3>¡Empieza tu aventura!</h3>
-                  <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-folder-open" aria-hidden="true"></i> Abre un proyecto</button>
-                  <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-file" aria-hidden="true"></i> Crea un proyecto</button>
-                  <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cog" aria-hidden="true"></i> Cambia los ajustes</button>
-                  <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-user-circle" aria-hidden="true"></i> ¡Aprende con otros!</button>
-
-                </div>
-              </div>
-
-    				</div>
-    				<div class="tab-pane" id="2b">
-              <h3>Pestaña de configuración!</h3>
-    				</div>
-            <div class="tab-pane" id="3b">
-              <h3>Pestaña de editor!</h3>
-    				</div>
-            <div class="tab-pane" id="4b">
-              <h3>nueva pestaña!</h3>
+      <li class="active">
+        <a  href="#1b" data-toggle="tab">Bienvenido</a>
+      </li>
+      <li><a href="#2b" data-toggle="tab">Configuración</a>
+      </li>
+      <li><a href="#3b" data-toggle="tab">Editor</a>
+      </li>
+      <li><a href="#4b" data-toggle="tab" class="fa fa-plus-circle plus-size" aria-hidden="true"></a>
+      </li>
+    </ul>
+    <div class="tab-content tab-content-blue clearfix">
+      <div class="tab-pane active" id="1b">
+        <div class="row">
+          <div class="col-sm-8">
+            <img class="welcome-logo" src="img/vertical_logo.png">
+            <h3>¡Aprende a progrmar!</h3>
+            <strong>Si necesitas ayuda, visita:</strong>
+            <ul>
+              <li>
+                <p>Documentación oficial sobre el lenguajde de programación JavaScript</p>
+              </li>
+              <li>
+                <p>Documentación sobre Ginger Code y esta aplicación de escritorio</p>
+              </li>
+              <li>
+                <p>Conoce a la comuniad que esta destras</p>
+              </li>
+              <li>
+                <p>Ponte a prueba con nuestros ejercicios!</p>
+              </li>
+              <li>
+                <p>Aprende desde cero a tu ritmo con nuestros vídeos de Youtube</p>
+              </li>
+            </ul>
+            <div class="checkbox">
+              <label><input type="checkbox" value="welcome-tab">Mostrar esta pestaña de bienvenida la próxima vez</label>
             </div>
-    			</div>
+          </div>
+          <div class="col-sm-4">
+            <h3>¡Empieza tu aventura!</h3>
+            <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-folder-open" aria-hidden="true"></i> Abre un proyecto</button>
+            <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-file" aria-hidden="true"></i> Crea un proyecto</button>
+            <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-cog" aria-hidden="true"></i> Cambia los ajustes</button>
+            <button type="button" class="btn btn-default btn-lg btn-block"><i class="fa fa-user-circle" aria-hidden="true"></i> ¡Aprende con otros!</button>
+          </div>
+        </div>
       </div>
-
+      <div class="tab-pane" id="2b">
+        <h3>Pestaña de configuración!</h3>
+      </div>
+      <div class="tab-pane" id="3b">
+        <header>
+          <img class="editor-logo center-block" src="img/horizontal_logo.png">
+        </header>
+        <div id="space">
+          <section>
+            <div class="row">
+              <div id="PC" class="col-sm-6">
+                <h3>Pseudocodigo: <i class="fa fa-floppy-o pull-right" aria-hidden="true"></i> </h3>
+                <textarea id="PCt"></textarea>
+              </div>
+              <div id="JS" class="col-sm-6">
+                <h3>JavaScript:</h3>
+                <textarea id="JSt"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <div id="CONSOLE" class="col-sm-12">
+                <h3>Resultado <i class="fa fa-play-circle pull-right" aria-hidden="true"onclick="jailrun();"></i></h3>
+                <textarea id="CONSOLEt"></textarea>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="extra text-center">
+        </div>
+      </div>
+      <div class="tab-pane" id="4b">
+        <h3>nueva pestaña!</h3>
+      </div>
+    </div>
+    <p class="footer">
+      Desarrollado con &hearts; por <a target="_blank" href="https://github.com/OSWeekends">Open Source Weekends</a>.
+      <a target="_blank" href="https://www.meetup.com/es-ES/Open-Source-Weekends/"><span class='symbol'>circlemeetup</span></a>
+      <a target="_blank" href="https://www.facebook.com/osweekends/"><span class='symbol'>circlefacebook</span></a>
+      <a target="_blank" href="https://github.com/OSWeekends"><span class='symbol'>circlegithubalt</span></a>
+      <a target="_blank" href="mailto:osweekends@gmail.com?Subject=Hola%20desde%20Ginger%20Desktop"><span class='symbol'>circleemail</span></a>
+      <a target="_blank" href="https://twitter.com/os_weekends"><span class='symbol'>circletwitterbird</span></a>
+      <!--
+        Versión (<script>const pck = require('../package.json');document.write(pck.version);</script>) usando Node(<script>document.write(process.versions.node)</script>),
+        Chromium (<script>document.write(process.versions.chrome)</script>) y Electron (<script>document.write(process.versions.electron)</script>).
+        -->
+    </p>
     <!-- Bootstrap core JavaScript
-    ================================================== -->
+      ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-
     <!-- Insert this line above script imports  -->
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
-
     <!-- normal script imports etc  -->
+    <!-- BOOTSTRAP -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+    <!-- EDITOR DE CÓDIGO...  -->
+    <!-- Integración de codemirror-->
+    <script src="js/codemirror.js"></script>
+    <script src="js/codemirror-javascript.js"></script>
+    <script src="js/cm-integration.js"></script>
+    <!-- Algoritmo para pasar de pseudocodigo a JS-->
+    <script src="js/pc-js.js"></script>
     <!-- Insert this line after script imports -->
     <script>if (window.module) module = window.module;</script>
-
     <script>
       $('#myTabs a').click(function (e) {
         e.preventDefault()
