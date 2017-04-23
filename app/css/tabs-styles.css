@@ -1,0 +1,192 @@
+:root{
+    --mainOrange: #FF3643;
+    --darkOrange: #661D1D;
+    --lightOrange: #F7B3B7;
+    --mainPurple: #8436C2;
+    --darkPurple: #371E59;
+    --lightPurple: #C2ABE0;
+    --mainBlack: #232328;
+    --mainWhite: #f7f3eb;
+    --mainGrey: #73737F;
+    --lightGrey: #D0D0E2;
+    --green: #75D27C;
+    --red: #CC3F54;
+}
+
+@font-face {
+  font-family: 'Gilroy-Black';
+  src: url(fonts/Gilroy-Black/Gilroy-Black.woff2) format('woff2'),
+       url(fonts/Gilroy-Black/Gilroy-Black.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url(fonts/Gilroy-Bold/Gilroy-Bold.woff2) format('woff2'),
+       url(fonts/Gilroy-Bold/Gilroy-Bold.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'ApercuPro-Mono';
+  src: url(fonts/ApercuPro-Mono/ApercuPro-Mono.woff2) format('woff2'),
+       url(fonts/ApercuPro-Mono/ApercuPro-Mono.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'ApercuPro-Regular';
+  src: url(fonts/ApercuPro-Regular/ApercuPro.woff2) format('woff2'),
+       url(fonts/ApercuPro-Regular/ApercuPro.woff) format('woff');
+}
+
+body{
+    min-height: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: var(--mainOrange);
+}
+
+/* ------------ Override styles ------------ */
+
+.container{
+    padding: 0;
+}
+
+.row{
+    margin: 0;
+}
+
+a{
+    color: var(--mainWhite);
+}
+
+/* ------------ Wrapper ------------ */
+
+.wrapper{
+    min-width: 98%;
+    min-height: 98%;
+    min-height: 98vh;
+    background-color: var(--mainWhite);    
+}
+
+/* ------------ NAV BAR ------------ */
+
+#exTab3 .nav-pills {
+    display: flex;
+    background: var(--mainOrange);    
+}
+
+#exTab3 .nav>li {
+    flex-basis: 18%;    
+    border-radius: 4px 4px 0 0;     
+    background-color: var(--mainBlack);  
+    border-bottom: none;
+    text-align: center;    
+}
+
+#exTab3 .nav>li:last-child{
+    flex-basis: 7%;
+}
+
+#exTab3 .nav>li a{
+    height: 100%;
+    font-size: 20px; 
+    border-radius: 2px 4px 0 0;   
+}
+
+#exTab3 .nav .plus-size{
+    font-size: 25px;
+}
+
+/* Override Bootstrap nav pills active,hover and focus colors */
+.nav-pills>li.active>a, .nav-pills>li.active>a:focus, .nav-pills>li>a:hover {
+    color: var(--mainBlack);
+    background-color: var(--mainWhite);
+}
+
+
+
+/* ------------ Panes  ------------ */
+
+#exTab3 .tab-content { 
+    color : var(--mainBlack);    
+    min-height: 93vh;
+    display: flex;
+    align-items: center;
+}
+
+.tab-pane{
+    flex: 1;
+}
+
+/* ------------  ------------ */
+
+/* WELCOME*/
+.welcome-logo{  
+    max-width: 80%;
+    margin-top: 30px;
+}
+
+.welcome-text{
+    margin-left: 50px;
+}
+
+.welcome-text p{
+    margin-bottom: 0;
+}
+
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-options>h3{
+    margin-bottom: 0;
+}
+
+@media (min-width: 768px){
+    .welcome-options {
+        margin-top: 250px;
+    }
+}
+
+.welcome-button{
+    height: 50px;
+    margin: 20px 0;
+    border: none;
+    border-radius: 4px;
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    text-align: left;
+    max-width: 500px;
+}
+
+.welcome-button:hover{
+    box-sizing: border-box;
+    border: 1px solid var(--mainBlack);
+    border-radius: 4px;
+    background-color: var(--mainWhite);
+    color: var(--mainBlack);
+}
+
+.welcome-button>i {
+    margin: 0 15px;
+}
+
+.
+/* EDITOR */ 
+
+.editor-logo{
+    max-width: 30%;    
+    margin-top: 30px;
+}
+
+#space h3{
+    background-color: var(--mainBlack);
+    color: var(--mainWhite);
+    margin-bottom: 0px;
+    padding: 5px 35px;
+}
+
