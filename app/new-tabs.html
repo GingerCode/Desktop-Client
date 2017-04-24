@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="icons/logo.ico">
+    <title>Ginger Code - Aprender a programar es divertido</title>
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- EDITOR DE CÓDIGO...  -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <!-- Librería codemirror -->
+    <link rel="stylesheet" href="css/codemirror.css">
+    <link rel="stylesheet" href="theme/ambiance.css">
+    <!-- FONTS FOOTER -->
+    <link rel="stylesheet" href="css/monosocialiconsfont.css">
+    <link rel="stylesheet" href="css/tabs-styles.css"> 
+  </head>
+    
+  <body onload="cmIntegration();">
+    <div id="exTab3" class="container wrapper">
+        <ul class="nav nav-pills">
+          <li class="active">
+            <a  href="#1b" data-toggle="tab">Bienvenido</a>
+          </li>
+          <li><a href="#2b" data-toggle="tab">Configuración</a>
+          </li>
+          <li><a href="#3b" data-toggle="tab">Editor</a>
+          </li>
+          <li><a href="#4b" data-toggle="tab" class="fa fa-plus-circle plus-size" aria-hidden="true"></a>
+          </li>
+        </ul>
+        
+        <div class="tab-content">
+            <div class="tab-pane active" id="1b">
+                <div class="row">
+                    <div class="col-sm-6 flex-col">                        
+                        <img class="welcome-logo" src="img/Logo@2x.png">
+                        <div class="welcome-text">
+                            <h3>¡Aprende a programar!</h3>
+                            <strong>Si necesitas ayuda, visita:</strong>
+                            <ul>
+                              <li>
+                                <p>Documentación oficial sobre el lenguajde de programación JavaScript</p>
+                              </li>
+                              <li>
+                                <p>Documentación sobre Ginger Code y esta aplicación de escritorio</p>
+                              </li>
+                              <li>
+                                <p>Conoce a la comuniad que esta destras</p>
+                              </li>                              
+                              <li>
+                                <p>Aprende desde cero a tu ritmo con nuestros vídeos de Youtube</p>
+                              </li>
+                            </ul>
+                            <div class="checkbox">
+                              <label><input type="checkbox" value="welcome-tab">Mostrar esta pestaña de bienvenida la próxima vez</label>
+                            </div>                        
+                        </div> 
+                    </div> 
+                    
+                    <div class="col-sm-6 flex-col welcome-options">
+                        <h3>¡Empieza tu aventura!</h3>
+                        <button type="button" class="btn btn-default btn-lg btn-block welcome-button"><i class="fa fa-folder-open" aria-hidden="true"></i> <strong>Abre</strong> un proyecto</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block welcome-button"><i class="fa fa-file" aria-hidden="true"></i> <strong>Crea</strong> un proyecto</button>
+                        <button type="button" class="btn btn-default btn-lg btn-block welcome-button"><i class="fa fa-cog" aria-hidden="true"></i> Cambia los <strong>ajustes</strong></button>
+                        <button type="button" class="btn btn-default btn-lg btn-block welcome-button"><i class="fa fa-user-circle" aria-hidden="true"></i> ¡<strong>Conoce</strong> a otros!</button> 
+                    </div>    
+                </div>
+            </div> 
+            <div class="tab-pane" id="2b">
+                <h3>Pestaña de configuración!</h3>
+            </div>
+            
+            <div class="tab-pane" id="3b">
+                <header>
+                    <img class="editor-logo center-block" src="img/Logo - formato horizontal@2x.png">
+                </header>
+                <div id="space">
+                    <section>
+                        <div class="row">
+                            <div id="PC" class="col-sm-6">
+                                <h3>Pseudocodigo: <i class="fa fa-floppy-o pull-right" aria-hidden="true"></i> </h3>
+                                <textarea id="PCt"></textarea>
+                            </div>
+                            <div id="JS" class="col-sm-6">
+                                <h3>JavaScript:</h3>
+                                <textarea id="JSt"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div id="CONSOLE" class="col-sm-12">
+                                <h3>Resultado <i class="fa fa-play-circle pull-right" aria-hidden="true"onclick="jailrun();"></i></h3>
+                                <textarea id="CONSOLEt"></textarea>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="extra text-center">
+                </div>
+            </div>
+            
+            
+        </div>       
+    </div> 
+    
+    
+  
+    <!-- Bootstrap core JavaScript
+      ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Insert this line above script imports  -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <!-- normal script imports etc  -->
+    <!-- BOOTSTRAP -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- EDITOR DE CÓDIGO...  -->
+    <!-- Integración de codemirror-->
+    <script src="js/codemirror.js"></script>
+    <script src="js/codemirror-javascript.js"></script>
+    <script src="js/cm-integration.js"></script>
+    <!-- Algoritmo para pasar de pseudocodigo a JS-->
+    <script src="js/pc-js.js"></script>
+    <!-- Insert this line after script imports -->
+    <script>if (window.module) module = window.module;</script>
+    <script>
+      $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
+  </body>
+</html>

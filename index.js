@@ -25,7 +25,7 @@ function createMainWindow() {
         icon: path.join(__dirname, "app/img/app_logo.png")
     });
 
-    win.loadURL(`file://${__dirname}/app/tabs.html`);
+    win.loadURL(`file://${__dirname}/app/new-tabs.html`);
     win.on('closed', onClosed);
 
     return win;
